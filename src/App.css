@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'SFProDisplayBlack';
+    src: url('./assets/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body{
+    font-family: 'SFProDisplayBlack';
+  }
