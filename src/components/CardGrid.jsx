@@ -24,6 +24,10 @@ function CardGrid() {
 
   return (
     <>
+      <div className='con'>
+          <span className='bla'>Services That We Provide.</span>
+          <span className='gra'>Thats Helps Your Branding.</span>
+        </div>
       <div className="card-grid">
         {cardItems.map((item, index) => (
           <div
@@ -54,13 +58,20 @@ function CardGrid() {
           </div>
         ))}
       </div>
+  <div className='con'>
+    <span>who we are.help too<span>&nbsp;</span></span>
+    <span className='gra'>improve your brand</span>
+  </div>
 
-      <div className="video-container" id="vid">
-        <video controls>
-          <source src="/images/Niral.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+  <div className="video-container" id="vid">
+    <div className="video-logo"></div>
+  <video controls>
+    <source src="/images/Niral.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div className="play-button" onClick={() => document.getElementById("vid").querySelector("video").play()} />
+</div>
+
     </>
   );
 }

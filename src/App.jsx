@@ -3,7 +3,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
-import ImageSlider from './components/ImageSlider';
 import CardGrid from './components/CardGrid';
 import TestimonialSection from './components/TestimonialSection';
 import EmailBanner from './components/EmailBanner';

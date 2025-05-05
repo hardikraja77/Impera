@@ -1,8 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   background-color: #ffffff;
 }
 
@@ -17,16 +24,19 @@
 }
 
 .center {
+  font-size: 13px;
   justify-content: center;
 }
 
 .right {
+  display: flex;
   justify-content: flex-end;
 }
 
 .logo img {
-  width: 100px;
-  height: auto;
+  width: auto;
+  height: 40px;
+  padding-left: 30px;
 }
 
 .nav-links {
@@ -41,10 +51,12 @@
 }
 
 .demo {
-  padding: 8px 16px;
-  background-color: #007bff;
+  padding: 14px 16px;
+  font-size: 13px;
+  background-color: #000000;
   color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
+  transform: translateX(-10px);
   cursor: pointer;
 }

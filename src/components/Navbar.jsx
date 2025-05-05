@@ -17,7 +17,8 @@ function Navbar() {
         <ul className="nav-links">
           <li><a href="#Home">Home</a></li>
           <li><a href="#About" onClick={click}>About</a></li>
-          <li><a href="#Services">Services</a></li>
+          <li><a href="#Service">Service</a></li>
+          <li><a href="#ContactUs">ContactUs</a></li>
         </ul>
       </div>
       <div className="navbar-section right">
