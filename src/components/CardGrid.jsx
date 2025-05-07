@@ -3,20 +3,17 @@ import '../styles/CardGrid.css';
 
 const cardItems = [
   {
-    tag: 'Digital',
-    title: 'SEO',
-    img: '/images/seo1.png'
+    img: '/images/div.png'
   },
   {
-    tag: 'Social Media',
-    title: 'Social Ads',
-    img: '/images/social_media_marketing.png'
+    img: '/images/div1.png'
   },
   {
-    tag: 'Graphic Design',
-    title: 'Logo Design',
-    img: '/images/graphic.jpeg'
-  }
+    img: '/images/div2.png'
+  },
+  {
+    img: '/images/div3.png'
+  },
 ];
 
 function CardGrid() {
@@ -24,52 +21,44 @@ function CardGrid() {
 
   return (
     <>
-      <div className='con'>
-          <span className='bla'>Services That We Provide.</span>
-          <span className='gra'>Thats Helps Your Branding.</span>
-        </div>
-      <div className="card-grid">
-        {cardItems.map((item, index) => (
-          <div
-            key={index}
-            className={`card-box ${activeIndex === index ? 'active' : activeIndex !== null ? 'blur' : ''}`}
-            onClick={() => setActiveIndex(index)}
-          >
-            <p className="card-tag">{item.tag}</p>
-            <h2 className="card-title">{item.title}</h2>
-            <img src={item.img} alt={item.title} className="card-image" />
-            
-            {activeIndex === index && (
-              <div className="card-details">
-                <p>
-                  More information about <strong>{item.title}</strong> goes here.
-                  You can include descriptions, features, or even buttons here.
-                </p>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setActiveIndex(null);
-                  }}
-                >
-                  Close
-                </button>
-              </div>
-            )}
+      <div className="card-slider-wrapper">
+  <div className="card-slider">
+    {cardItems.map((item, index) => (
+      <div
+        key={index}
+        className={`card-box ${activeIndex === index ? 'active' : activeIndex !== null ? 'blur' : ''}`}
+        onClick={() => setActiveIndex(index)}
+      >
+        <img src={item.img} alt="" className="card-image" />
+        {activeIndex === index && (
+          <div className="card-details">
+            <p>
+              More information about <strong>""</strong> goes here.
+              You can include descriptions, features, or even buttons here.
+            </p>
+            <button onClick={(e) => {
+              e.stopPropagation();
+              setActiveIndex(null);
+            }}>
+              Close
+            </button>
           </div>
-        ))}
+        )}
       </div>
-  <div className='con'>
-    <span>who we are.help too<span>&nbsp;</span></span>
-    <span className='gra'>improve your brand</span>
+    ))}
   </div>
+</div>
 
-  <div className="video-container" id="vid">
-    <div className="video-logo"></div>
-  <video controls>
-    <source src="/images/Niral.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <div className="play-button" onClick={() => document.getElementById("vid").querySelector("video").play()} />
+<div className='txt-container'>
+  <div className='txt'>
+    <p>from crafting a powerful brand identity to driving traffic,engagement,<br></br>and conversions,we offer a full suite of services to scale your business</p>
+  </div>
+  <div className='btn-logo'>
+    <button>
+      Services
+      <span>➔</span>
+    </button>
+  </div>
 </div>
 
     </>

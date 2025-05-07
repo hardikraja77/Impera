@@ -8,6 +8,8 @@ import TestimonialSection from './components/TestimonialSection';
 import EmailBanner from './components/EmailBanner';
 import Image from './components/Image';
 import About from './components/About';
+import Insta from './components/Insta';
+
 
 function App() {
   return (
@@ -15,9 +17,9 @@ function App() {
       <Navbar />
       <Hero />
       <Image />
+      <Insta />
       <CardGrid />
       <About />
-      <TestimonialSection />
       <EmailBanner />
       <Footer />
     </div>

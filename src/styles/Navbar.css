@@ -50,6 +50,11 @@
   color: #333333;
 }
 
+.nav-links li a img{
+  height:10px;
+  cursor: none;
+}
+
 .demo {
   padding: 14px 16px;
   font-size: 13px;

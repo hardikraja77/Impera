@@ -5,12 +5,14 @@ export default function Hero() {
   return (
     <section className="hero-banner">
       <div className="hero-left">
-        <h1>Fuel your Growth with</h1>
-        <h1 className="gray-text">Personalized Dynamic Creatives</h1>
+        <h1>Scale Your Brand with Data</h1>
+        <h1 className="gray-text">-Driven Digital Marketing</h1>
+        <p>We help businesses grow with high-converting strategies in Branding,SEO,<br></br>Social Media,and Web Development.Let's turn your vision into results.</p>
+        <button>Book A Free Strategy Call</button>
       </div>
       <div className="hero-right">
         <div className="help-box">
-          <img src="/images/sai.jpeg" alt="Specialist" />
+          <img src="/images/Frame.png" alt="Specialist" />
           <div>
             <p><strong>Need some help?</strong></p>
             <a href="#">Ask a Specialist</a>

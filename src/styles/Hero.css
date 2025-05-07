@@ -1,15 +1,34 @@
-
 .hero-banner {
+  width: 100%;
+  margin: 0;
+  background-color: #f9f9fb;
+  padding: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f9f9fb;
-  padding: 100px 80px;
 }
+
 
 .hero-left h1 {
   font-size: 42px;
-  margin: 10px;
+  margin: 0 10px 10px 10px;
+  
+}
+
+.hero-left p{
+  color:#6e6e73;
+ 
+}
+
+.hero-left button{
+  margin-top: 5%;
+  width:226px;
+  height:48px;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid #000;
+  font-weight: bold;
+  
 }
 
 .gray-text {

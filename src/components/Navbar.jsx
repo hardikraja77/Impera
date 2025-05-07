@@ -15,6 +15,7 @@ function Navbar() {
       </div>
       <div className="navbar-section center">
         <ul className="nav-links">
+          <li><a href=""><img src="/images/Subtract.png"></img></a></li>
           <li><a href="#Home">Home</a></li>
           <li><a href="#About" onClick={click}>About</a></li>
           <li><a href="#Service">Service</a></li>
@@ -24,7 +25,7 @@ function Navbar() {
       <div className="navbar-section right">
         <button
           className="demo"
-          onClick={() => window.open('https://forms.gle/wNvLNtiXKc8o8JaeA', '_blank')}
+          onClick={() => window.open('https://forms.gle/JxC2VHCFK57pFG738', '_blank')}
         >
           Book a Demo
         </button>
