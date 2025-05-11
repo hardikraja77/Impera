@@ -9,7 +9,7 @@
 }
 
 .card-box {
-  width: 250px;
+  width: 300px;
   background: #fff;
   padding: 16px;
   border-radius: 12px;
@@ -28,7 +28,7 @@
 
 .card-box img {
   width: 95%;
-  height: 250px;
+  height: 300px;
   object-fit: cover;
   border-radius: 8px;
   margin-top: 10px;
