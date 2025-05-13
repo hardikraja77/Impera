@@ -3,6 +3,7 @@
     justify-content: space-between;
     margin-top: 5%;
     margin-left: 5%;
+    flex-wrap: wrap;
 }
 
 .con {
@@ -19,21 +20,24 @@
     color: #7865F7;
 }
 
+/* Image container - responsive and centered */
 .img {
-    margin-right: 10%;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4 / 3;
     position: relative;
-    width: 400px;
-    height: 300px;
+    margin: 0 auto 30px auto;
     perspective: 1000px;
     overflow: hidden;
 }
 
+/* Carousel image */
 .carousel-img {
     position: absolute;
-    width: 60%;
-    height: 80%;
-    top: 10%;
-    left: 20%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     object-fit: cover;
     border-radius: 20px;
     opacity: 0;
@@ -50,13 +54,13 @@
 
 .carousel-img.left {
     opacity: 0.4;
-    transform: translateX(-120%) rotateY(45deg);
+    transform: translateX(-100%) rotateY(45deg);
     z-index: 2;
 }
 
 .carousel-img.right {
     opacity: 0.4;
-    transform: translateX(120%) rotateY(-45deg);
+    transform: translateX(100%) rotateY(-45deg);
     z-index: 2;
 }
 
@@ -66,6 +70,7 @@
     z-index: 1;
 }
 
+/* Soft shadow effect */
 .img::after {
     content: '';
     position: absolute;
@@ -75,4 +80,61 @@
     height: 60%;
     filter: blur(30px);
     z-index: -1;
+}
+
+/* ========================
+   Responsive Media Queries
+=========================== */
+
+@media (max-width: 1024px) {
+    .out_con {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .con {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .img {
+        width: 90%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .img {
+        width: 95%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+    .carousel-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .col {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+    }
+
+    .carousel-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .col {
+        font-size: 16px;
+    }
 }
