@@ -1,0 +1,111 @@
+@property --angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: -10deg;
+}
+
+@keyframes clock-wipe {
+  to { --angle: 370deg; }
+}
+
+@keyframes logo-fade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.align {
+  background: linear-gradient(to bottom, #e5e5e5 90%, #ffffff 100%);
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 650px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: white;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hero Image with Fixed Initial Visibility */
+.scene-1 {
+  background-image: url('/images/hero_image.png');
+  z-index: 2;
+  -webkit-mask-image: none; /* Show full image */
+  mask-image: none;
+}
+.image-container:hover .scene-1 {
+  -webkit-mask-image:
+    conic-gradient(
+      #000 0deg,
+      #000 calc(var(--angle) - 10deg),
+      transparent calc(var(--angle) + 10deg),
+      transparent 360deg
+    ),
+    conic-gradient(
+      transparent 340deg,
+      #000 360deg
+    );
+  mask-image:
+    conic-gradient(
+      #000 0deg,
+      #000 calc(var(--angle) - 10deg),
+      transparent calc(var(--angle) + 10deg),
+      transparent 360deg
+    ),
+    conic-gradient(
+      transparent 340deg,
+      #000 360deg
+    );
+  animation: clock-wipe 2s linear forwards;
+}
+
+
+/* Logo Image */
+.scene-2 {
+  background-image: url('/images/logo_big.png');
+  z-index: 1;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+}
+
+/* Hover Effects */
+.image-container:hover .scene-1 {
+  animation: clock-wipe 2s linear forwards;
+}
+
+.image-container:hover .scene-2 {
+  animation: logo-fade 5s linear forwards;
+}
+
+/* Reset states */
+.image-container:not(:hover) .scene-1 {
+  --angle: -10deg;
+  animation: none;
+}
+
+.image-container:not(:hover) .scene-2 {
+  opacity: 0;
+  animation: none;
+}

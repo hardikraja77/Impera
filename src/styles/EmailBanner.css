@@ -1,0 +1,117 @@
+.email-banner {
+  position: relative;
+  width: 80%;
+  height: 400px; 
+  background-image: url('/images/impera_cta.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 5%;
+  margin: 5% 0 5% 10%;
+
+}
+
+.banner-content{
+  width: 80%;
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 5% 0;
+}
+
+.btn-outline,
+.btn-primary {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+
+
+@media (max-width: 1024px) {
+    .email-banner {
+        width: 90%;
+        height: 350px; 
+        margin: 5% 0;
+    }
+
+    .banner-content {
+        width: 90%; 
+        left: 15px; 
+    }
+
+    .banner-buttons {
+        flex-direction: column; 
+        gap: 8px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .email-banner {
+        width: 95%;
+        height: 300px; 
+        margin: 5% 0;
+    }
+
+    .banner-content {
+        width: 95%; 
+        left: 10px; 
+        bottom: 10px; 
+    }
+
+    .banner-buttons {
+        flex-direction: column; 
+    }
+
+    .btn-outline,
+    .btn-primary {
+        padding: 8px 16px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .email-banner {
+        width: 100%;
+        height: 250px; 
+        margin: 5% 0;
+    }
+
+    .banner-content {
+        width: 100%;
+        left: 5px; 
+        bottom: 5px; 
+    }
+
+    .banner-buttons {
+        flex-direction: column; 
+        gap: 5px; 
+    }
+
+    .btn-outline,
+    .btn-primary {
+        padding: 6px 12px;
+    }
+}

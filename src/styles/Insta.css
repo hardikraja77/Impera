@@ -1,0 +1,170 @@
+
+.out_con {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-left: 5%;
+  flex-wrap: wrap;
+}
+
+.con {
+  margin-left: 5%;
+}
+
+/* Updated font for all h1 inside .con */
+.con h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 3.5rem;
+}
+
+/* Gradient text */
+.col {
+  background: linear-gradient(to right, #F0C9A3 15%, #BE63B7 30%, #7865F7 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Solid colored text */
+.gra {
+  color: #7865F7;
+}
+
+/* Responsive font sizes */
+@media (max-width: 1024px) {
+  .con h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .con h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .con h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Image container - responsive and centered */
+.img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  margin: 0 auto 30px auto;
+  perspective: 1000px;
+  overflow: hidden;
+}
+/* Carousel image */
+.carousel-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: transform 1s ease, opacity 1s ease;
+    z-index: 0;
+}
+
+.carousel-img.center {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+    z-index: 3;
+}
+
+.carousel-img.left {
+    opacity: 0.4;
+    transform: translateX(-100%) rotateY(45deg);
+    z-index: 2;
+}
+
+.carousel-img.right {
+    opacity: 0.4;
+    transform: translateX(100%) rotateY(-45deg);
+    z-index: 2;
+}
+
+.carousel-img.hidden {
+    opacity: 0;
+    transform: scale(0.5);
+    z-index: 1;
+}
+
+/* Soft shadow effect */
+.img::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    filter: blur(30px);
+    z-index: -1;
+}
+
+/* ========================
+   Responsive Media Queries
+=========================== */
+
+@media (max-width: 1024px) {
+    .out_con {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .con {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .img {
+        width: 90%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .img {
+        width: 95%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+    .carousel-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .col {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+    }
+
+    .carousel-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .col {
+        font-size: 16px;
+    }
+}

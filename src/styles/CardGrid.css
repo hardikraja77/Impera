@@ -1,0 +1,310 @@
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 0;
+  padding: 20px;
+}
+
+.card-box {
+  width: 300px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.card-box:hover {         
+  transform: scale(1.02);
+}
+
+.card-box img {
+  width: 95%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-left: 4%;
+  
+}
+
+.card-box.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 600px;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background: #ffffff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+.card-box.blur {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+.card-details {
+  margin-top: 20px;
+}
+
+.card-details button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #ff5050;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.video-container {
+  position: relative;
+  background: radial-gradient(ellipse at top center, #000000 0%, #000 70%);
+  border-radius: 20px;
+  padding: 60px 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(6, 6, 6, 0.6);
+  overflow: hidden;
+}
+
+.video-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200px;
+  height: 80px;
+  background: radial-gradient(ellipse at center, #000000 0%, transparent 80%);
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+
+.video-logo {
+  font-family: 'Impact', sans-serif;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+}
+
+video {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.con{
+  margin-left: 12%;
+  margin-top: 5%;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.con .gra{
+  color: #6e6e73;
+}
+
+.card-slider-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  padding: 20px 0;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.card-slider-wrapper::-webkit-scrollbar {
+  display: none; 
+}
+
+.card-slider {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+  width: max-content;
+  margin: 5% 0 0 10%;
+}
+
+.txt-container{
+  display:flex;
+  margin:5% 5% 5% 10%;
+  background-color: #DCEBF4;
+  padding: 15px 15px 15px 40px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.txt{
+  color:#2F2F2F;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.btn-logo button{
+  width:180px;
+  height:65px;
+  background-color: #fffefe;
+  color: hwb(0 0% 100%);
+  border-radius: 40px;
+  border: none;
+  padding-left: 20%;
+  
+}
+
+.btn-logo button span{
+  height:50px;
+  width:50px;
+  background-color: #0066CC;
+  color:#ffffff;
+  margin-left: 15%;
+  border-radius: 50%;
+  padding: 7%;
+}
+
+
+/* ... your existing styles remain unchanged above ... */
+
+/* ========== Responsive Design ========== */
+
+@media (max-width: 1024px) {
+  .card-box {
+    width: 90%;
+    margin: auto;
+  }
+
+  .card-box img {
+    height: 250px;
+  }
+
+  .con {
+    margin-left: 5%;
+    font-size: 1.3em;
+  }
+
+  .video-container {
+    padding: 40px 10px;
+  }
+
+  .video-logo {
+    font-size: 2.5rem;
+  }
+
+  video {
+    max-width: 100%;
+  }
+
+  .txt-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5% 5%;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 20px;
+  }
+
+  .btn-logo button {
+    width: 100%;
+    height: 55px;
+    padding-left: 0;
+    font-size: 14px;
+  }
+
+  .btn-logo button span {
+    display: none; /* Optional: hide the circle icon on small screens */
+  }
+
+  .txt {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .card-slider {
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-box img {
+    height: 200px;
+  }
+
+  .video-logo {
+    font-size: 2rem;
+  }
+
+  .con {
+    font-size: 1.1em;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .txt {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .btn-logo button {
+    height: 50px;
+    font-size: 13px;
+  }
+
+  .card-slider {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .txt-container {
+    padding: 15px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-box {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .card-box img {
+    height: 180px;
+  }
+
+  .video-container {
+    padding: 30px 10px;
+  }
+
+  .video-logo {
+    font-size: 1.8rem;
+  }
+
+  .txt {
+    font-size: 12px;
+  }
+
+  .btn-logo button {
+    font-size: 12px;
+    height: 45px;
+  }
+
+  .card-slider {
+    margin-left: 0;
+    padding: 0 10px;
+  }
+}
