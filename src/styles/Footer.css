@@ -1,73 +1,110 @@
 .footer {
-  background-color: #000;
-  color: #fff;
-  padding: 2rem 1rem;
+  background: #000;
+  color: white;
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
 }
 
-.footer-container {
-  max-width: 1500px;
-  margin: 0 0 5% 0;
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+  min-width: 150px;
+}
+
+
+
+.footer-column h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-column p {
+  margin: 6px 0;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.footer-column p:hover {
+  color: #fff;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  max-width: 320px;
+}
+
+.tweet-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-header {
   display: flex;
   align-items: center;
-  width: 100%;
-  flex-wrap: nowrap;
+  margin-bottom: 10px;
 }
 
-
-.footer-left {
-  flex-grow: 1;
-  margin-right: 10%;
+.avatar {
+  background : url('/images/sai.jpeg');
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-.footer-links {
+.user-info .name {
+  font-weight: bold;
+}
+
+.user-info .handle {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: -4px;
+}
+
+.twitter-icon {
+  margin-left: auto;
+  font-size: 18px;
+  color: white;
+}
+
+.tweet-content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-icons {
   display: flex;
   justify-content: flex-end;
-  flex-grow: 1;
+  margin-top: 30px;
+  gap: 20px;
 }
 
-
-.footer-links a {
-  margin: 0 1rem;
-  text-decoration: none;
+.footer-icons i {
+  font-size: 20px;
   color: white;
-  transition: color 0.3s;
+  background: #111;
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.2s ease;
 }
 
-.logo {
-  height: 30px;
+.footer-icons i:hover {
+  transform: scale(1.1);
 }
 
-.credit {
-  font-size: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-
-.footer-links a:hover {
-  color: #ccc;
-}
-
-.footer-icons{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.footer-icons a {
-  margin: 0 0.5rem;
-  color: white;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-.footer-icons img{
-  height:13px;
-  width:13px;
-  margin: 10px 20px 0;
-}
-
-.footer-icons a:hover {
-  color: #ccc;
-}
 
 .footer-bottom {
   border-top: 1px solid #444;
@@ -76,3 +113,61 @@
   text-align: center;
   font-size: 0.875rem;
 }
+
+
+@media (max-width: 768px) {
+  .footer-sections {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-column {
+    margin-bottom: 30px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  
+
+  .tweet-header {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .twitter-icon {
+    display: none; /* Hides icon to simplify mobile view */
+  }
+
+  .footer-icons {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    
+  }
+
+  .footer-icons i {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #111;
+    border-radius: 50%;
+  }
+
+  .glass-card {
+    max-width: 90%;
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+
+  .tweet-content {
+    font-size: 14px;
+  }
+}
+
+
+

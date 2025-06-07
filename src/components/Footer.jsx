@@ -1,33 +1,54 @@
-import React from "react";
-//import { FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import "../styles/Footer.css"; // Import the CSS file
+import React from 'react';
+import '../styles/Footer.css';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-left">
-          <img src="/images/impera.png" alt="Impera Logo" className="logo" />
+      <div className="footer-sections">
+        <div className="footer-column">
+          <h3>Home</h3>
+          <p>Pricing</p>
+          <p>Blog</p>
+          <p>About us</p>
         </div>
-
-        <div className="footer-links">
-          <a href="#">Home</a>
-          <a href="#">Pricing</a>
-          <a href="#">Blog</a>
-          <a href="#">About us</a>
+        <div className="footer-column">
+          <h3>Legal</h3>
+          <p>Terms of Service</p>
+          <p>Privacy Policy</p>
+          <p>Cookies Policy</p>
         </div>
+        <div className="footer-column glass-card">
+          <div className="tweet-card">
+            <div className="tweet-header">
+              <div className="avatar" />
+              <div className="user-info">
+                <p className="name">Impera</p>
+                <p className="handle">@impera</p>
+              </div>
+              <i className="fab fa-twitter twitter-icon"></i>
+            </div>
+            <p className="tweet-content">
+              We're just announced new feature that would help you increase your experience!!
+            </p>
+          </div>
         </div>
-
-        <div className="footer-icons">
-          <a href="" target="_blank"><img src="/images/twitter.gif" alt="twitter-logo"></img></a>
-          <a href="" target="_blank"><img src="/images/linkedin.png" alt="Linkedin-logo"></img></a>
-          <a href="https://www.instagram.com/impera.create?igsh=Z2FncGtvN2pidGlo&utm_source=qr" target="_blank"><img src="/images/instagram.png" alt="instagram-logo"></img></a>
-          <a href="https://www.facebook.com/profile.php?id=61573540032039" target="_blank"><img src="/images/facebook.png"></img></a>
-          
       </div>
-
+      <div className="footer-icons">
+        <a href="https://www.instagram.com/impera.create?igsh=Z2FncGtvN2pidGlo&utm_source=qr" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-instagram" />
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61573540032039" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-facebook" />
+        </a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-twitter" />
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-linkedin" />
+        </a>
+      </div>
       <div className="footer-bottom">
-        EmailGigga (c) 2023
+        Impera © 2025 All Rights Reserved
       </div>
     </footer>
   );
